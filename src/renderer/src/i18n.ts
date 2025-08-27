@@ -17,7 +17,7 @@ i18n
   // Initialize i18next
   .init({
     // Default language when detection fails
-    fallbackLng: "en",
+    fallbackLng: "id",
     // Debug mode for development
     debug: process.env.NODE_ENV === "development",
     // Namespaces configuration
