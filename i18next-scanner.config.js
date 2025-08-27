@@ -21,9 +21,9 @@ module.exports = {
         return value;
       },
     },
-    lngs: ['en', 'zh'],
+    lngs: ['en', 'zh', 'id'],
     ns: ['translation'],
-    defaultLng: 'en',
+    defaultLng: 'id',
     defaultNs: 'translation',
     defaultValue(lng, ns, key) {
       if (lng === 'en') {
