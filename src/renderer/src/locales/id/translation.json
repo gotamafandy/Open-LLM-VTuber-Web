@@ -1,0 +1,137 @@
+{
+    "common": {
+      "save": "Simpan",
+      "cancel": "Batal",
+      "settings": "Pengaturan",
+      "close": "Tutup",
+      "accept": "Terima"
+    },
+    "settings": {
+      "tabs": {
+        "general": "Umum",
+        "live2d": "Live2D",
+        "asr": "ASR",
+        "tts": "TTS",
+        "agent": "Agen",
+        "about": "Tentang"
+      },
+      "general": {
+        "language": "Bahasa",
+        "useCameraBackground": "Gunakan Latar Belakang Kamera",
+        "showSubtitle": "Tampilkan Subtitle",
+        "backgroundImage": "Gambar Latar Belakang",
+        "customBgUrlPlaceholder": "Masukkan URL gambar",
+        "customBgUrl": "Atau masukkan URL latar belakang custom",
+        "characterPreset": "Preset Karakter",
+        "wsUrl": "URL WebSocket",
+        "baseUrl": "URL Dasar",
+        "imageCompressionQuality": "Kualitas Kompresi Gambar",
+        "imageCompressionQualityPlaceholder": "Masukkan kualitas kompresi (0-100)",
+        "imageMaxWidth": "Lebar Maksimum Gambar",
+        "imageMaxWidthPlaceholder": "Masukkan lebar maksimum dalam piksel"
+      },
+      "live2d": {
+        "pointerInteractive": "Pointer Interaktif",
+        "scrollToResize": "Aktifkan Scroll untuk Mengubah Ukuran"
+      },
+      "asr": {
+        "autoStopMic": "Hentikan Mic Saat AI Mulai Berbicara",
+        "autoStopMicDesc": "Menghentikan mikrofon saat AI mulai berbicara untuk menghindari umpan balik audio",
+        "autoStartMicOnConvEnd": "Mulai Mic Saat Percakapan Selesai",
+        "autoStartMicOnConvEndDesc": "Mengulangi mikrofon saat AI selesai berbicara untuk percakapan yang lancar",
+        "autoStartMicOn": "Mulai Mic Saat AI Terinterupsi",
+        "autoStartMicOnDesc": "Mengulangi mikrofon saat Anda menginterupsi AI untuk interaksi yang terus-menerus",
+        "positiveSpeechThreshold": "Treshold Probabilitas Suara",
+        "positiveSpeechThresholdDesc": "Treshold minimum (1-100) yang diperlukan untuk mendeteksi suara. Nilai yang lebih tinggi mengurangi false positives",
+        "negativeSpeechThreshold": "Treshold Suara Negatif",
+        "negativeSpeechThresholdDesc": "Treshold kepercayaan (0-100) di bawah mana deteksi suara berhenti. Nilai yang lebih rendah membuat deteksi kurang sensitif",
+        "redemptionFrames": "Frame Redemption",
+        "redemptionFramesDesc": "Jumlah frame berturut-turut (1-100) yang diperlukan untuk memverifikasi deteksi suara. Nilai yang lebih tinggi mengurangi gangguan suara"
+      },
+      "agent": {
+        "allowProactiveSpeak": "Izinkan AI berbicara proaktif",
+        "idleSecondsToSpeak": "Mmungkinkan AI berbicara setelah beberapa detik diam",
+        "allowButtonTrigger": "Tampilkan tombol tangan untuk memicu AI berbicara"
+      },
+      "about": {
+        "title": "Open LLM VTuber Frontend",
+        "version": "Versi",
+        "projectLinks": "Tautan Proyek",
+        "github": "GitHub", 
+        "documentation": "Dokumentasi",
+        "license": "License",
+        "copyright": "Hak Cipta",
+        "viewLicense": "Lihat Lisensi"
+      }
+    },
+    "footer": {
+      "typeYourMessage": "Tulis pesan Anda...",
+      "cameraControl": "Klik untuk memulai kamera",
+      "cameraStopping": "Klik untuk menghentikan kamera",
+      "screenControl": "Klik untuk memulai pengambilan layar",
+      "screenStopping": "Klik untuk menghentikan pengambilan layar"
+    },
+    "sidebar": {
+      "camera": "Kamera",
+      "screen": "Layar",
+      "browser": "Browser",
+      "live": "Langsung",
+      "noMessages": "Belum ada pesan. Mulai percakapan!",
+      "noBrowserSession": "Tidak ada sesi browser aktif",
+      "browserSession": "Sesi Browser"
+    },
+    "group": {
+      "management": "Manajemen Grup",
+      "yourUuid": "UUID Anda",
+      "inviteMember": "Undang Anggota",
+      "enterMemberUuid": "Masukkan UUID anggota",
+      "invite": "Undang",
+      "members": "Anggota",
+      "you": "Anda",
+      "leaveGroup": "Keluar Grup",
+      "removeMember": "Hapus Anggota",
+      "leave": "Keluar"
+    },
+    "history": {
+      "chatHistoryList": "Daftar Riwayat Chat",
+      "noMessages": "Belum ada pesan"
+    },
+    "notification": {
+      "characterLoaded": "Karakter baru dimuat",
+      "characterSwitched": "Karakter berubah",
+      "historyLoaded": "Riwayat dimuat",
+      "newConversation": "Percakapan baru dimulai",
+      "newChatHistory": "Riwayat chat baru dibuat",
+      "historyDeleteSuccess": "Riwayat berhasil dihapus",
+      "historyDeleteFail": "Gagal menghapus riwayat"
+    },
+    "error": {
+      "cameraApiNotSupported": "API kamera tidak didukung pada perangkat ini",
+      "noCameraFound": "Tidak ada kamera ditemukan pada perangkat ini",
+      "failedStartCamera": "Gagal memulai kamera",
+      "failedStartBackgroundCamera": "Gagal memulai kamera latar belakang",
+      "failedStartScreenCapture": "Gagal memulai pengambilan layar",
+      "failedStartVAD": "Gagal memulai VAD",
+      "llmCantHear": "LLM tidak dapat mendengar Anda.",
+      "audioPlayback": "Kesalahan pemutaran audio",
+      "enterValidUuid": "Silakan masukkan UUID yang valid",
+      "cannotDeleteCurrentHistory": "Tidak dapat menghapus riwayat chat saat ini",
+      "failedCapture": "Gagal menangkap frame {{source}}",
+      "failedParseWebSocket": "Gagal memparsing pesan WebSocket",
+      "websocketNotOpen": "WebSocket tidak terbuka.",
+      "vadMisfire": "Suara terdeteksi tetapi terlalu singkat. Coba bicara lebih keras/lebih lama, atau atur pengaturan (treshold suara lebih rendah, treshold suara negatif lebih rendah, kurangi frame redemption)."
+    },
+    "aiState": {
+      "idle": "diam",
+      "thinking-speaking": "berpikir/berbicara",
+      "interrupted": "terinterupsi",
+      "loading": "memuat",
+      "listening": "mendengarkan",
+      "waiting": "menunggu"
+    },
+    "wsStatus": {
+      "connected": "Terhubung",
+      "connecting": "Menghubungkan",
+      "clickToReconnect": "Klik untuk Menghubungkan Kembali"
+    }
+  } 

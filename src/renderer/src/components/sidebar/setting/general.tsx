@@ -22,6 +22,7 @@ const useCollections = () => {
     items: [
       { label: "English", value: "en" },
       { label: "中文", value: "zh" },
+      { label: "Indonesia", value: "id" },
     ],
   });
 
