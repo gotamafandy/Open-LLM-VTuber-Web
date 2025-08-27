@@ -58,6 +58,8 @@ export class LAppView {
 
     this._viewMatrix.setScreenRect(left, right, bottom, top); // デバイスに対応する画面の範囲。 Xの左端、Xの右端、Yの下端、Yの上端
     this._viewMatrix.scale(LAppDefine.ViewScale, LAppDefine.ViewScale);
+    
+    this._viewMatrix.translateY(-0.6); // Shift view down by 60%
 
     this._deviceToScreen.loadIdentity();
     if (width > height) {
