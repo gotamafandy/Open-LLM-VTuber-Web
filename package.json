@@ -14,6 +14,8 @@
     "typecheck": "npm run typecheck:node && npm run typecheck:web",
     "start": "electron-vite preview",
     "dev": "electron-vite dev",
+    "dev:staging": "electron-vite dev --mode staging",
+    "dev:production": "electron-vite dev --mode production",
     "build": "electron-vite build",
     "postinstall": "electron-builder install-app-deps",
     "build:unpack": "npm run build && electron-builder --dir",
@@ -22,6 +24,8 @@
     "build:linux": "electron-vite build && electron-builder --linux",
     "dev:web": "vite serve src/renderer --config vite.config.ts",
     "build:web": "vite build --config vite.config.ts --mode web",
+    "build:web:staging": "vite build --config vite.config.ts --mode web-staging",
+    "build:web:production": "vite build --config vite.config.ts --mode web-production",
     "extract-translations": "i18next-scanner --config i18next-scanner.config.js"
   },
   "dependencies": {

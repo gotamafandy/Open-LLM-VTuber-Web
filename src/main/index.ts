@@ -74,6 +74,8 @@ function setupIPC(): void {
 }
 
 app.whenReady().then(() => {
+
+  
   electronApp.setAppUserModelId("com.electron");
 
   windowManager = new WindowManager();

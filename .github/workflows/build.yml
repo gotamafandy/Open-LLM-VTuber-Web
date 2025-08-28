@@ -176,3 +176,63 @@ jobs:
           clean: true
           single-commit: true
           token: ${{ secrets.GITHUB_TOKEN }}
+
+  build_web_staging:
+    needs: [draft]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build web staging target
+        env:
+          VITE_WS_URL: ${{ vars.WS_URL_STAGING }}
+          VITE_BASE_URL: ${{ vars.BASE_URL_STAGING }}
+        run: npm run build:web:staging
+
+      - name: Deploy to GitHub Pages (Staging)
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: build-stg
+          folder: dist/web
+          clean: true
+          single-commit: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  build_web_production:
+    needs: [draft]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build web production target
+        env:
+          VITE_WS_URL: ${{ vars.WS_URL_PRODUCTION }}
+          VITE_BASE_URL: ${{ vars.BASE_URL_PRODUCTION }}
+        run: npm run build:web:production
+
+      - name: Deploy to GitHub Pages (Production)
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: build-prod
+          folder: dist/web
+          clean: true
+          single-commit: true
+          token: ${{ secrets.GITHUB_TOKEN }}
