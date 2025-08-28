@@ -202,7 +202,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: build-stg
-          folder: dist/web
+          folder: dist/web-staging
           clean: true
           single-commit: true
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -232,7 +232,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: build-prod
-          folder: dist/web
+          folder: dist/web-production
           clean: true
           single-commit: true
           token: ${{ secrets.GITHUB_TOKEN }}

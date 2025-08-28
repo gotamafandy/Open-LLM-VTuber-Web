@@ -65,8 +65,14 @@ const createConfig = async (outDir: string) => ({
 });
 
 export default defineConfig(async ({ mode }) => {
-  if (mode === 'web' || mode === 'web-staging' || mode === 'web-production') {
+  if (mode === 'web') {
     return createConfig('dist/web');
+  }
+  if (mode === 'web-staging') {
+    return createConfig('dist/web-staging');
+  }
+  if (mode === 'web-production') {
+    return createConfig('dist/web-production');
   }
   return createConfig('dist/renderer');
 });
